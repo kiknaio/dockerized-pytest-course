@@ -21,6 +21,9 @@
 
   $ docker-compose build
   $ docker-compose run test sh
+
+  # last item is keyword of the test file (to run single or logically grouped tests)
+  $ docker-compose run test pytest -k test_sad
   ```
 
 
@@ -107,4 +110,9 @@ to get started with open source contributions to their project.
 
 ## Feedback
 - After watching the course, if you have any feedback, I'd love to hear from
-you! Please make an issue on this repository, and I will get back to you. 
+you! Please make an issue on this repository, and I will get back to you.
+
+
+## Notes
+
+- Fixtures examples is under `tests/chp3/video1/test_fixtures_start.py`. Fixtures help test to share same initial state. MySQL connection can be declared as a fixture and it later can be used a to load a mock data or pre-requisits to use a function.
